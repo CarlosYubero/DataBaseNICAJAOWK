@@ -27,6 +27,27 @@ public class Main {
 		conexion.intoducir_test("Test9", "2015-01-14 17:02:00", 9);
 		conexion.intoducir_test("Test10", "2015-01-14 17:02:00", 10);
 		
+		conexion.intoducir_question("Pregunta1", 1);
+		conexion.intoducir_question("Pregunta2", 1);
+		conexion.intoducir_question("Pregunta3", 1);
+		conexion.intoducir_question("Pregunta4", 1);
+		conexion.intoducir_question("Pregunta5", 1);
+		conexion.intoducir_question("Pregunta1", 2);
+		conexion.intoducir_question("Pregunta2", 2);
+		conexion.intoducir_question("Pregunta3", 2);
+		conexion.intoducir_question("Pregunta4", 2);
+		conexion.intoducir_question("Pregunta5", 2);
+
+		conexion.intoducir_answer("Restuesta1", true, 1);
+		conexion.intoducir_answer("Restuesta2", true, 2);
+		conexion.intoducir_answer("Restuesta3", true, 3);
+		conexion.intoducir_answer("Restuesta4", true, 4);
+		conexion.intoducir_answer("Restuesta5", true, 5);
+		conexion.intoducir_answer("Restuesta6", true, 6);
+		conexion.intoducir_answer("Restuesta7", true, 7);
+		conexion.intoducir_answer("Restuesta8", true, 8);
+		conexion.intoducir_answer("Restuesta9", true, 9);
+		conexion.intoducir_answer("Restuesta10", true, 10);
 
 	}
 

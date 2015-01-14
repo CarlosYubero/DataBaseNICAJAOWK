@@ -52,22 +52,62 @@ public class DataBase {
 		}
 		return retornar == 0;
 	}
+
 	
 	public boolean intoducir_test (String name, String date, int score){
 		int retornar = 0;
 		try {
-			String sentenciaSql = "INSERT INTO USER(name,date,score) VALUES (?,?,?)";
+			String sentenciaSql = "INSERT INTO TEST(name,date,score) VALUES (?,?,?)";
 			PreparedStatement sentencia = conexion.prepareStatement(sentenciaSql);
 			
 			sentencia.setString(1,name);
 			sentencia.setString(2,date);
 			sentencia.setInt(3,score);
-			retornar = sentencia.executeUpdate(sentenciaSql);
+			
+			retornar = sentencia.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 		return retornar == 0;
 	}
+	
+	
+	public boolean intoducir_question (String text, int id){
+		int retornar = 0;
+		try {
+			String sentenciaSql = "INSERT INTO QUESTION(text,id_test) VALUES (?,?)";
+			PreparedStatement sentencia = conexion.prepareStatement(sentenciaSql);
+			
+			sentencia.setString(1,text);
+			sentencia.setInt(2,id);
+			
+			retornar = sentencia.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return retornar == 0;
+	}
+	
+	public boolean intoducir_answer (String text, boolean is_correct, int id_question){
+		int retornar = 0;
+		try {
+			String sentenciaSql = "INSERT INTO ANSWER(text,is_correct,id_question) VALUES (?,?,?)";
+			PreparedStatement sentencia = conexion.prepareStatement(sentenciaSql);
+			
+			sentencia.setString(1,text);
+			sentencia.setBoolean(2,is_correct);
+			sentencia.setInt(3,id_question);
+			
+			retornar = sentencia.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return retornar == 0;
+	}
+	
+//	public void introducir_pregunta_actividad(Pregunta pregunta, Respuesta[] respuestas, Test test){
+//		intoducir_test(test.getName(), test.getDate(), );
+//	}
 	
 	
 
