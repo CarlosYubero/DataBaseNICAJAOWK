@@ -4,6 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -132,7 +133,8 @@ public class DataBase {
 	}
 	
 	public void imprimir_test(Test test){
-		String sql = "SELECT id FROM test WHERE name = '" + test.getName() + "'";	
+		String sql = "SELECT id FROM test WHERE name = '" + test.getName() + "'";
+		ArrayList<String[]> preguntasRespuestas;
 		try {
 			Statement sentencia = conexion.createStatement();
 			ResultSet rs = sentencia.executeQuery(sql);

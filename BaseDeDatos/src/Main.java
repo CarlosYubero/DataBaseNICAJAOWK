@@ -7,7 +7,7 @@ public class Main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		conexion = new DataBase();
-//		conexion.introducir_usuario("Pepe1", "pepe1@uem.com");
+//conexion.introducir_usuario("Pepe1", "pepe1@uem.com");
 //		conexion.introducir_usuario("Pepe2", "pepe2@uem.com");
 //		conexion.introducir_usuario("Pepe3", "pepe3@uem.com");
 //		conexion.introducir_usuario("Pepe4", "pepe4@uem.com");
